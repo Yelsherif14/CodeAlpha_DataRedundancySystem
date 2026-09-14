@@ -1,8 +1,8 @@
 # Data Redundancy Removal System
 
-A Flask-based web application developed to detect and prevent duplicate user data before storing it in a SQLite database.
+A Flask-based web application designed to detect and prevent duplicate user data before storing it in a SQLite database.
 
-The system validates user input, checks for duplicate email addresses, and stores only unique and valid records.
+The system validates user input, checks for duplicate email addresses, and stores only valid and unique records.
 
 ## Technologies Used
 
@@ -21,18 +21,22 @@ CodeAlpha_DataRedundancySystem/
 │
 ├── app.py
 ├── data.db
+│
 ├── database/
 │   └── db.py
+│
 ├── templates/
 │   └── index.html
+│
 ├── tests/
 │   └── test_app.py
+│
 ├── screenshots/
 │   ├── application.png
 │   ├── ec2-instance.png
 │   ├── flask-terminal.png
-│   ├── security-group.png
-│   └── project-files.png
+│   ├── project-files.png
+│   └── security-group.png
 │
 └── venv/
 ```
@@ -46,19 +50,19 @@ CodeAlpha_DataRedundancySystem/
 * Prevent duplicate records
 * Store valid and unique data in SQLite
 * Automated testing using Pytest
-* Deployed on AWS EC2
+* Deployment on AWS EC2
 
 ## Testing
 
 The application was tested using Pytest.
 
-All implemented tests passed successfully:
+All tests passed successfully:
 
 ```text
 4 passed
 ```
 
-The tests cover:
+### Tests Covered
 
 * Adding a unique user
 * Rejecting duplicate email addresses
@@ -67,25 +71,25 @@ The tests cover:
 
 ## AWS EC2 Deployment
 
-The application was deployed and tested on an Ubuntu AWS EC2 instance.
+The application was successfully deployed on an Ubuntu AWS EC2 instance.
 
-### 1. EC2 Instance
+### EC2 Instance
 
-An Ubuntu EC2 instance was created and configured to host the Flask application.
+The application was hosted on an Ubuntu EC2 instance.
 
 ![EC2 Instance](screenshots/ec2-instance.png)
 
-*Ubuntu EC2 instance used to deploy the application.*
+*Ubuntu EC2 instance used to host the application.*
 
-### 2. Project Files
+### Project Files on EC2
 
-The project was cloned from GitHub onto the EC2 instance.
+The project was cloned from GitHub and configured on the EC2 instance.
 
 ![Project Files](screenshots/project-files.png)
 
-*Project files after cloning the GitHub repository on the EC2 instance.*
+*Project files after cloning the repository on the EC2 instance.*
 
-### 3. Running Flask
+### Flask Application Running
 
 The Flask application was configured to listen on all network interfaces using port `5000`.
 
@@ -95,17 +99,17 @@ app.run(host="0.0.0.0", port=5000, debug=True)
 
 ![Flask Running](screenshots/flask-terminal.png)
 
-*Flask development server running successfully on the AWS EC2 instance.*
+*Flask development server running successfully on the EC2 instance.*
 
-### 4. Security Group Configuration
+### Security Group Configuration
 
-Inbound TCP traffic was allowed on port `5000` to make the Flask application accessible from the internet.
+Inbound TCP traffic was allowed on port `5000` through the EC2 Security Group.
 
 ![Security Group](screenshots/security-group.png)
 
-*AWS Security Group rule allowing inbound traffic on port 5000.*
+*AWS Security Group configured to allow traffic on port 5000.*
 
-### 5. Application Running
+### Application Running on AWS
 
 The deployed application was successfully accessed through the EC2 public IPv4 address.
 
@@ -118,20 +122,23 @@ The deployed application was successfully accessed through the EC2 public IPv4 a
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/CodeAlpha_DataRedundancySystem.git
+git clone https://github.com/Yelsherif14/CodeAlpha_DataRedundancySystem.git
 cd CodeAlpha_DataRedundancySystem
 ```
 
-Create and activate a virtual environment:
-
-### Windows
+Create a virtual environment:
 
 ```bash
 python -m venv venv
+```
+
+Activate the virtual environment on Windows:
+
+```bash
 venv\Scripts\activate
 ```
 
-Install the required dependencies:
+Install the required packages:
 
 ```bash
 pip install flask pytest
@@ -151,7 +158,7 @@ http://127.0.0.1:5000
 
 ## Running Tests
 
-From the project root directory:
+Run the tests from the project root directory:
 
 ```bash
 pytest
@@ -165,12 +172,16 @@ Expected result:
 
 ## Deployment Environment
 
-* Cloud Provider: AWS
-* Service: Amazon EC2
-* Operating System: Ubuntu Server
-* Application Framework: Flask
-* Database: SQLite
-* Application Port: 5000
+| Component            | Technology    |
+| -------------------- | ------------- |
+| Cloud Provider       | AWS           |
+| Compute Service      | Amazon EC2    |
+| Operating System     | Ubuntu Server |
+| Programming Language | Python        |
+| Web Framework        | Flask         |
+| Database             | SQLite        |
+| Testing              | Pytest        |
+| Application Port     | 5000          |
 
 ## Internship
 
