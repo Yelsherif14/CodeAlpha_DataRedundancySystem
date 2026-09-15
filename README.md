@@ -91,22 +91,4 @@ The project was cloned from GitHub and configured on the EC2 instance.
 
 *Project files after cloning the repository on the EC2 instance.*
 
-### Flask Application Running
-
-The Flask application was configured to listen on all network interfaces using port `5000`.
-
-```python
-app.run(host="0.0.0.0", port=5000, debug=True)
-```
-
-![Flask Running](screenshots/flask-terminal.png)
-
-*Flask development server running successfully on the EC2 instance.*
-
-### Security Group Configuration
-
-Inbound TCP traffic was allowed on port `5000` through the EC2 Security Group.
-
-![Security Group](screenshots/security-group.png)
-
-*AWS Security Group configur*
+### Flask Applicatio
